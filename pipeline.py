@@ -80,7 +80,8 @@ def run_pipeline():
 
         try:
             s = classify_sentiment(c)
-        except:
+        except Exception as e:
+            print("Classification error:", e)
             s = "Neutral"
 
         sentiments.append(s)
